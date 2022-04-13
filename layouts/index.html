@@ -3,24 +3,6 @@
   <header class="hero">
     <div class="container">
       <h1>{{- .Title -}}</h1>
-      <nav aria-label="Fil d’arianne">
-        <ol class="breadcrumb" itemscope="" itemtype="https://schema.org/BreadcrumbList">
-          <li class="breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-            <a href="https://www.rebootcommunication.org/" itemprop="item">
-              <span itemprop="name">Accueil</span>
-              <meta content="1" itemprop="position">
-            </a>
-          </li>
-          <li class="breadcrumb-item active" itemprop="itemListElement" itemscope=""
-              itemtype="https://schema.org/ListItem">
-              <span itemprop="name">
-                {{- .Title -}}
-              </span>
-            <meta content="2" itemprop="position">
-            </a>
-          </li>
-        </ol>
-      </nav>
     </div>
   </header>
   <div class="container">
@@ -70,7 +52,7 @@
         <div class="card-container">
           {{- range where .Site.RegularPages ".Type" "partners" -}}
 
-          <a class="speaker-card" href="/partners/{{- .File.BaseFileName -}}">
+          <a class="speaker-card" href="{{ .Permalink }}">
             <h2>{{- .Params.prenom }} {{ .Params.nom -}} </h2>
             <p>{{- .Params.titre_du_profil_maximum_80_caracteres -}} </p>
             <small class="place">{{- .Params.region_principale_dintervention -}} </small>
