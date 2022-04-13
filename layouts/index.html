@@ -1,0 +1,107 @@
+{{ define "main" }}
+<main>
+  <header class="hero">
+    <div class="container">
+      <h1>{{- .Title -}}</h1>
+      <nav aria-label="Fil d’arianne">
+        <ol class="breadcrumb" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+          <li class="breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+            <a href="https://www.rebootcommunication.org/" itemprop="item">
+              <span itemprop="name">Accueil</span>
+              <meta content="1" itemprop="position">
+            </a>
+          </li>
+          <li class="breadcrumb-item active" itemprop="itemListElement" itemscope=""
+              itemtype="https://schema.org/ListItem">
+              <span itemprop="name">
+                {{- .Title -}}
+              </span>
+            <meta content="2" itemprop="position">
+            </a>
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+  <div class="container">
+    <section itemprop="articleBody">
+      <p>{{- .Description | safeHTML -}}</p>
+    </section>
+    <section>
+      <div class="tags">
+        <p>
+          Domaines
+        </p>
+        <ul>
+          <li><a href="/tags/developpement_durable"><small class="dot green-dot">Développement durable</small></a></li>
+          <li><small class="dot red-dot">RSE/RSO</small></li>
+          <li><small class="dot yellow-dot">Numérique</small></li>
+          <li><small class="dot green-dot">Marketing</small></li>
+          <li><small class="dot blue-dot">Communication</small></li>
+          <li><small class="dot red-dot">Médias et influence</small></li>
+          <li><small class="dot yellow-dot">Design et éco-conception</small></li>
+        </ul>
+        <p>
+          Régions
+        </p>
+        <ul>
+          <li><small>Auvergne-Rhône-Alpes</small></li>
+          <li><small>Bourgogne-Franche-Comté</small></li>
+          <li><small>Bretagne</small></li>
+          <li><small>Centre-Val de Loire</small></li>
+          <li><small>Corse</small></li>
+          <li><small>Grand Est</small></li>
+          <li><small>Hauts-de-France</small></li>
+          <li><small>Île-de-France</small></li>
+          <li><small>Normandie</small></li>
+          <li><small>Nouvelle-Aquitaine</small></li>
+          <li><small>Occitanie</small></li>
+          <li><small>Pays de la Loire</small></li>
+          <li><small>Provence-Alpes-Côte d'Azur</small></li>
+          <li><small>Guadeloupe</small></li>
+          <li><small>Martinique</small></li>
+          <li><small>Guyane</small></li>
+          <li><small>La Réunion</small></li>
+          <li><small>Mayotte</small></li>
+        </ul>
+      </div>
+      <div>
+        {{ len (where .Site.RegularPages ".Type" "partners") }}
+        <div class="card-container">
+          {{- range where .Site.RegularPages ".Type" "partners" -}}
+
+          <a class="speaker-card" href="/partners/{{- .File.BaseFileName -}}">
+            <h2>{{- .Params.prenom }} {{ .Params.nom -}} </h2>
+            <p>{{- .Params.titre_du_profil_maximum_80_caracteres -}} </p>
+            <small class="place">{{- .Params.region_principale_dintervention -}} </small>
+            <div class="tags-container">
+              {{- if eq .Params.developpement_durable "X" -}}
+              <small class="dot green-dot">Développement durable</small>
+              {{- end -}}
+              {{- if eq .Params.rserso "X" -}}
+              <small class="dot red-dot">RSE/RSO</small>
+              {{- end -}}
+              {{- if eq .Params.numerique "X" -}}
+              <small class="dot yellow-dot">Numérique</small>
+              {{- end -}}
+              {{- if eq .Params.marketing "X" -}}
+              <small class="dot green-dot">Marketing</small>
+              {{- end -}}
+              {{- if eq .Params.communication "X" -}}
+              <small class="dot blue-dot">Communication</small>
+              {{- end -}}
+              {{- if eq .Params.medias_et_influence "X" -}}
+              <small class="dot red-dot">Médias et influence</small>
+              {{- end -}}
+              {{- if eq .Params.design_et_eco_conception "X" -}}
+              <small class="dot yellow-dot">Design et éco-conception</small>
+              {{- end -}}
+            </div>
+          </a>
+          {{- end -}}
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+{{- end -}}

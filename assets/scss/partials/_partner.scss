@@ -1,0 +1,39 @@
+
+.container_partner{
+
+    p{
+        font-size: 14px;
+    }
+
+
+    .container_partner_info{
+        margin-right: 20vw;
+        margin-left: 20vw;
+        line-height : 4vh;
+    
+        .domaine{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        
+            .dot{
+                padding-right: 2rem;
+                // line-height : 20px;
+            }
+        }
+    
+        .link{
+            
+            a{
+                border-bottom: 1px solid #FFF;
+            }
+        }
+    }
+    div{
+        display: flex;
+        flex-direction: column;
+    }
+}
+small{
+    line-height: 28px;
+}

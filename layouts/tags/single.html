@@ -1,0 +1,72 @@
+{{- define "main" -}}
+<main>
+  <header class="hero">
+    <div class="container">
+      <h1>{{- .Title -}}</h1>
+      <nav aria-label="Fil d’arianne">
+        <ol class="breadcrumb" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+          <li class="breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+            <a href="https://www.rebootcommunication.org/" itemprop="item">
+              <span itemprop="name">Accueil</span>
+              <meta content="1" itemprop="position">
+            </a>
+          </li>
+          <li class="breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+            <a href="/" itemprop="item">
+              <span itemprop="name">Annuaire</span>
+              <meta content="1" itemprop="position">
+            </a>
+          </li>
+          <li class="breadcrumb-item active" itemprop="itemListElement" itemscope=""
+              itemtype="https://schema.org/ListItem">
+              <span itemprop="name">
+                {{- .Title -}}
+              </span>
+            <meta content="2" itemprop="position">
+            </a>
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+  <div class="container">
+    <section>
+      <div>
+        {{ len (where .Site.RegularPages ".Type" "partners") }}
+        <div class="card-container">
+          {{- range where .Site.RegularPages ".Type" "partners" -}}
+          <a class="speaker-card" href="/partners/{{- .File.BaseFileName -}}">
+            <h2>{{- .Params.prenom }} {{ .Params.nom -}} </h2>
+            <p>{{- .Params.titre_du_profil_maximum_80_caracteres -}} </p>
+            <small class="place">{{- .Params.region_principale_dintervention -}} </small>
+            <div class="tags-container">
+              {{- if eq .Params.developpement_durable "X" -}}
+              <small class="dot green-dot">Développement durable</small>
+              {{- end -}}
+              {{- if eq .Params.rserso "X" -}}
+              <small class="dot red-dot">RSE/RSO</small>
+              {{- end -}}
+              {{- if eq .Params.numerique "X" -}}
+              <small class="dot yellow-dot">Numérique</small>
+              {{- end -}}
+              {{- if eq .Params.marketing "X" -}}
+              <small class="dot green-dot">Marketing</small>
+              {{- end -}}
+              {{- if eq .Params.communication "X" -}}
+              <small class="dot blue-dot">Communication</small>
+              {{- end -}}
+              {{- if eq .Params.medias_et_influence "X" -}}
+              <small class="dot red-dot">Médias et influence</small>
+              {{- end -}}
+              {{- if eq .Params.design_et_eco_conception "X" -}}
+              <small class="dot yellow-dot">Design et éco-conception</small>
+              {{- end -}}
+            </div>
+          </a>
+          {{- end -}}
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+{{- end -}}

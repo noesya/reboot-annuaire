@@ -1,0 +1,18 @@
+<footer role="contentinfo">
+  <div class="container">
+    <div class="content">
+      <div>
+        <a class="logo" href="/"><img alt="Reboot !" height="174" loading="lazy" src="/assets/images/reboot-button.svg"
+                                      width="339"></a>
+      </div>
+      <div>
+      </div>
+      <div style="margin-top: auto">
+          Accéder au site principal
+          <b><a href="https://www.rebootcommunication.org">rebootcommunication.org</a></b>
+      </div>
+    </div>
+  </div>
+</footer>
+{{ $js := resources.Get "js/main.js" | js.Build (dict "minify" hugo.IsProduction) }}
+<script src="{{ $js.RelPermalink }}"></script>

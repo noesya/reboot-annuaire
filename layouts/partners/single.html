@@ -1,0 +1,83 @@
+{{- define "main" -}}
+    <header class="hero">
+        <div class="container">
+            <h1>{{- .Params.prenom }} {{ .Params.nom -}}</h1>
+            <p>{{ .Params.Séquentiel }}</p>
+            <nav aria-label="Fil d’arianne">
+                <ol class="breadcrumb" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+                        <a href="http://localhost:1313/" itemprop="item">
+                            <span itemprop="name">Accueil</span>
+                            <meta content="1" itemprop="position">
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item active" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+                        <a href="http://localhost:1313/partners/{{- lower .Params.Prenom -}}-{{- lower .Params.Nom -}}" itemprop="item">
+                            <span itemprop="name">{{ .Params.Prenom }} {{ .Params.Nom }}</span>
+                            <meta content="2" itemprop="position">
+                        </a>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container container_partner"> 
+        <small>{{ .Params.parcours_professionnel_maximum_256_caracteres }}</small>
+        <div class="container_partner_info">
+            <div class="region">
+                <small>Région</small>
+                <small class="place">{{ .Params.region_principale_dintervention }}</small>
+            </div>
+            <small>Domaines</small>
+            <ul class="domaine custom-ul">
+                {{ if eq .Params.developpement_durable "X" }}
+                <a href=""><li class="dot green-dot"><small>Développement durable</small></li></a>
+                {{ end }}
+                {{ if eq .Params.rserso "X" }}
+                <a href=""><li class="dot red-dot"><small>RSE/RSO</small></li></a>
+                {{ end }}
+                {{ if eq .Params.numerique "X" }}
+                <a href=""><li class="dot yellow-dot"><small>Numérique</small></li></a>
+                {{ end }}
+                {{ if eq .Params.marketing "X" }}
+                <a href=""><li class="dot green-dot"><small>Marketing</small></li></a>
+                {{ end }}
+                {{ if eq .Params.communication "X" }}
+                <a href=""><li class="dot blue-dot"><small>Communication</small></li></a>
+                {{ end }}
+                {{ if eq .Params.medias_et_influence "X" }}
+                <a href=""><li class="dot red-dot"><small>Médias et influence</small></li></a>
+                {{ end }}
+                {{ if eq .Params.design_et_eco_conception "X" }}
+                <a href=""><li class="dot yellow-dot"><small>Design et éco-conception</small></li></a>
+                {{ end }}
+            </ul>
+            <div class="distanciel">
+                <small>Distanciel</small>
+                <small>{{ .Params.souhaitez_vous_intervenir_a_distance }}</small>
+            </div>
+            <div class="phone">
+                <small>Téléphone</small>
+                <small>{{ .Params.numero_de_telephone }}</small>
+            </div>
+            <div class="mail">
+                <small>Email</small>
+                <small>{{ .Params.adresse_e_mail }}</small>
+            </div>
+            <div class="linkedin link">
+                <small>LinkedIn</small>
+                <small><a  href="{{ .Params.url_de_votre_profil_linkedin }}" target="_blank">{{ .Params.url_de_votre_profil_linkedin }}</a></small>
+            </div>
+            <div class="site link">
+                <small>Site</small>
+                <small><a href="{{ .Params.url_de_votre_site_web_professionnel }}" target="_blank">{{ .Params.url_de_votre_site_web_professionnel }}</a></small>
+            </div>
+        </div>
+        <div class="benevol">
+            <small>Conditions pour une intervention bénévole</small>
+            <p>{{ .Params.conditions_eventuelles_pour_une_intervention_benevole }}</p>
+        </div>
+    </div>
+{{ end }}
+{{/*  https://www.rebootcommunication.org  */}}
