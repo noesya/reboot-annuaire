@@ -1,3 +1,3 @@
 ---
-title: Numériques
+title: Numérique
 ---
