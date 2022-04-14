@@ -21,8 +21,11 @@
 </header>
 
 <div class="container container_partner">
+  {{ if .Params.description }}
   <h5>{{ .Params.description }}</h5>
+  {{ end }} 
   <div class="container_partner_info">
+    {{ if not ( in .Params.regions "Sélectionnez une région") }}
     <div class="region">
       <small>Région</small>
       {{ range .GetTerms "regions" }}
@@ -33,6 +36,8 @@
       </p>
       {{ end }}
     </div>
+    {{ end }}
+    {{ if .Params.domains }}
     <small>Domaines</small>
     <ul class="domains custom-ul">
       {{ range .GetTerms "domains" }}
@@ -43,6 +48,7 @@
           </a>
         </p>
       </li>
+      {{ end }}
       {{ end }}
     </ul>
     <div class="distanciel">
@@ -59,20 +65,26 @@
       <small>Email</small>
       <p>{{ .Params.email }} <a href="mailto:{{ .Params.email }}">Envoyer un mail</a></p>
     </div>
+    {{ if .Params.linkedin }}
     <div class="linkedin link">
       <small>LinkedIn</small>
       <p><a href="{{ .Params.linkedin }}" target="_blank">{{
         .Params.linkedin }}</a></p>
     </div>
+    {{ end }}
+    {{ if .Params.website }}
     <div class="site link">
       <small>Site</small>
       <p><a href="{{ .Params.website }}" target="_blank">{{
         .Params.website }}</a></p>
     </div>
+    {{ end }}
   </div>
+  {{ if .Params.conditions }}
   <div class="volunteer">
     <p>Conditions pour une intervention bénévole</p>
     <small>{{ .Params.conditions }}</small>
   </div>
+  {{ end }}
 </div>
 {{ end }}
