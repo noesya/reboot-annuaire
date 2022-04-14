@@ -15,13 +15,13 @@
           Domaines
         </p>
         <ul>
-          <li><a href="/domains/developpement-durable"><small>Développement durable</small></a></li>
-          <li><a href="/domains/rse-rso"><small>RSE/RSO</small></a></li>
-          <li><a href="/domains/numerique"><small>Numérique</small></a></li>
-          <li><a href="/domains/marketing"><small>Marketing</small></a></li>
-          <li><a href="/domains/communication"><small>Communication</small></a></li>
-          <li><a href="/domains/medias-et-influence"><small>Médias et influence</small></a></li>
-          <li><a href="/domains/design-et-eco-conception"><small>Design et éco-conception</small></a></li>
+          <li><a href="/domains/developpement-durable"><small  class="dot green-dot">Développement durable</small></a></li>
+          <li><a href="/domains/rse-rso"><small class="dot green-dot">RSE/RSO</small></a></li>
+          <li><a href="/domains/numerique"><small class="dot green-dot">Numérique</small></a></li>
+          <li><a href="/domains/marketing"><small class="dot green-dot">Marketing</small></a></li>
+          <li><a href="/domains/communication"><small class="dot green-dot">Communication</small></a></li>
+          <li><a href="/domains/medias-et-influence"><small class="dot green-dot">Médias et influence</small></a></li>
+          <li><a href="/domains/design-et-eco-conception"><small class="dot green-dot">Design et éco-conception</small></a></li>
         </ul>
         <p>
           Régions
@@ -54,18 +54,16 @@
           <div class="card">
             <a class="speaker-card" href="{{ .Permalink }}">
               <h3>{{- .Params.title }}</h3>
-              <p>{{- .Params.titre_du_profil_maximum_80_caracteres -}}</p>
-              <small class="place">{{- range .GetTerms "regions" -}}{{ .Title }}{{ end }}</small> 
-              <small class="computer">{{- .Params.remote -}}</small>       
+              <p>{{- .Params.description -}}</p>
+              <small class="place">{{- range .GetTerms "regions" -}}{{ .Title }}{{ end }}</small>
+              <small class="computer">{{- .Params.remote -}}</small>
               <ul class="domains custom-ul">
                 {{ range .GetTerms "domains" }}
-                  <li>
-                    <small>
-                      <a href="{{ .Permalink }}">
-                        {{ .Title }}
-                      </a>
-                    </small>
-                  </li>
+                <li>
+                  <small class="dot green-dot">
+                    {{ .Title }}
+                  </small>
+                </li>
                 {{ end }}
               </ul>
             </a>

@@ -2,7 +2,6 @@
 <header class="hero">
   <div class="container">
     <h1>{{- .Title -}}</h1>
-    <p>{{ .Params.Séquentiel }}</p>
     <nav aria-label="Fil d’arianne">
       <ol class="breadcrumb" itemscope="" itemtype="https://schema.org/BreadcrumbList">
         <li class="breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
@@ -22,7 +21,7 @@
 </header>
 
 <div class="container container_partner">
-  <h5>{{ .Params.parcours_professionnel_maximum_256_caracteres }}</h5>
+  <h5>{{ .Params.description }}</h5>
   <div class="container_partner_info">
     <div class="region">
       <small>Région</small>
@@ -37,9 +36,9 @@
     <small>Domaines</small>
     <ul class="domains custom-ul">
       {{ range .GetTerms "domains" }}
-      <li>
-        <p>
-          <a href="{{ .Permalink }}">
+      <li >
+        <p >
+          <a href="{{ .Permalink }}" class="dot green-dot">
             {{ .Title }}
           </a>
         </p>
@@ -50,31 +49,30 @@
       <small>Distanciel</small>
       <p class="computer">{{ .Params.remote }}</p>
     </div>
-    {{ if .Params.numero_de_telephone}}
-    <div class="phone">
+    {{ if .Params.phone}}
+    <div class="phone link">
       <small>Téléphone</small>
-      <p>{{ .Params.numero_de_telephone }}</p>
+      <p>{{ .Params.phone }} <a href="tel:{{ .Params.phone }}">Appeler</a></p>
     </div>
     {{ end }}
-    <div class="mail">
+    <div class="mail link">
       <small>Email</small>
-      <p>{{ .Params.adresse_e_mail }}</p>
+      <p>{{ .Params.email }} <a href="mailto:{{ .Params.email }}">Envoyer un mail</a></p>
     </div>
     <div class="linkedin link">
       <small>LinkedIn</small>
-      <p><a href="{{ .Params.url_de_votre_profil_linkedin }}" target="_blank">{{
-        .Params.url_de_votre_profil_linkedin }}</a></p>
+      <p><a href="{{ .Params.linkedin }}" target="_blank">{{
+        .Params.linkedin }}</a></p>
     </div>
     <div class="site link">
       <small>Site</small>
-      <p><a href="{{ .Params.url_de_votre_site_web_professionnel }}" target="_blank">{{
-        .Params.url_de_votre_site_web_professionnel }}</a></p>
+      <p><a href="{{ .Params.website }}" target="_blank">{{
+        .Params.website }}</a></p>
     </div>
   </div>
-  <div class="benevol">
+  <div class="volunteer">
     <p>Conditions pour une intervention bénévole</p>
     <small>{{ .Params.conditions }}</small>
   </div>
 </div>
 {{ end }}
-{{/*  https://www.rebootcommunication.org  */}}
