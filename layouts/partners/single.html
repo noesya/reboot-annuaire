@@ -48,7 +48,7 @@
     </ul>
     <div class="distanciel">
       <small>Distanciel</small>
-      <p class="computer">{{ .Params.distanciel }}</p>
+      <p class="computer">{{ .Params.remote }}</p>
     </div>
     {{ if .Params.numero_de_telephone}}
     <div class="phone">
@@ -72,8 +72,8 @@
     </div>
   </div>
   <div class="benevol">
-    <small>Conditions pour une intervention bénévole</small>
-    <p>{{ .Params.benevol }}</p>
+    <p>Conditions pour une intervention bénévole</p>
+    <small>{{ .Params.conditions }}</small>
   </div>
 </div>
 {{ end }}
