@@ -56,7 +56,7 @@
               <h2>{{- .Params.title }}</h2>
               <p>{{- .Params.titre_du_profil_maximum_80_caracteres -}}</p>
               <small class="place">{{- range .GetTerms "regions" -}}{{ .Title }}{{ end }}</small> 
-              <small class="computer">{{- .Params.distanciel -}}</small>       
+              <small class="computer">{{- .Params.remote -}}</small>       
               <ul class="domains custom-ul">
                 {{ range .GetTerms "domains" }}
                   <li>
