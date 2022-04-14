@@ -1,9 +1,40 @@
-<div>
-{{ if .Paginator.HasPrev }}
-	<a href="{{ .Paginator.Prev.URL }}">Previous Page</a>
+{{ if eq .Paginator.TotalPages 1 }}
+{{else }}
+	<div class="pagination">
+		<div class="paginator-page">
+			<p>Page {{ .Paginator.PageNumber }} - 6 résultats par page</p>
+		</div>
+		<div class="pagination-buttons">
+			{{ if eq .Paginator.PageNumber 1 2 }}
+			{{else }}
+				<a href="{{ .Paginator.First.URL }}">{{ .Paginator.First.PageNumber }}</a>
+			{{ end }}
+
+			{{ if .Paginator.HasPrev }}
+				{{ if eq .Paginator.PageNumber 2 }}
+				{{else }}
+					<p>-</p>
+				{{ end }}
+				<a href="{{ .Paginator.Prev.URL }}">{{ .Paginator.Prev.PageNumber }}</a>
+				<p>-</p>
+			{{ end }}
+
+			<a class="current-page">{{ .Paginator.PageNumber }}</a>
+
+			{{ if .Paginator.HasNext }}
+				<p>-</p>
+				<a href="{{ .Paginator.Next.URL }}">{{ .Paginator.Next.PageNumber }}</a>
+				{{ if eq .Paginator.PageNumber (sub .Paginator.Last.PageNumber 1) }}
+				{{else}}
+					<p>-</p>
+				{{ end }}
+			{{ end }}
+
+
+			{{ if eq .Paginator.PageNumber .Paginator.Last.PageNumber (sub .Paginator.Last.PageNumber 1)}}
+			{{else}}
+				<a href="{{ .Paginator.Last.URL }}">{{ .Paginator.Last.PageNumber }}</a>
+			{{ end }}
+		</div>
+	</div>
 {{ end }}
-{{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}
-{{ if .Paginator.HasNext }}
-	<a href="{{ .Paginator.Next.URL }}">Next Page</a>
-{{ end }}
-</div>

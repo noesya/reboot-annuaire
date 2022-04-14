@@ -50,7 +50,8 @@
       <div class="results-container">
         <p>{{ len (where .Site.RegularPages ".Type" "partners") }} résultats</p>
         <div class="card-container">
-          {{- range where .Site.RegularPages ".Type" "partners" -}}
+          {{/*  {{- range where .Site.RegularPages ".Type" "partners" -}}  */}}
+          {{- range .Paginator.Pages -}}
           <div class="card">
             <a class="speaker-card" href="{{ .Permalink }}">
               <h3>{{- .Params.title }}</h3>
@@ -70,6 +71,7 @@
           </div>
           {{- end -}}
         </div>
+        {{ partial "pagination"  . }}
       </div>
     </section>
   </div>
