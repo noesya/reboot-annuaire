@@ -12,8 +12,8 @@ hugo serve
 
 ## Lancement du script
 
-1. Télécharger [les données du framaform](https://framaforms.org/node/547650/webform-results/download) 
-2. Enregistrer le fichier dans la racine du projet
+1. Télécharger [les données du framaform](https://framaforms.org/node/547650/webform-results/download)
+2. Enregistrer le fichier .tsv dans la racine du projet
 3. Installer pyYAML 
 ```bash 
 python3 -m pip install pyyaml
