@@ -24,37 +24,29 @@
   </header>
   <div class="container">
     <section>
-      <div>
+      <div class="results-container">
+        <p>{{ len (where .Site.RegularPages ".Type" "partners") }} résultats</p>
         <div class="card-container">
-          {{- range .Pages -}}
-          <a class="speaker-card" href="{{- .Permalink -}}">
-            <h2>{{- .Title -}} </h2>
-            <p>{{- .Params.titre_du_profil_maximum_80_caracteres -}} </p>
-            <small class="place">{{- .Params.region_principale_dintervention -}} </small>
-            <div class="tags-container">
-              {{- if eq .Params.developpement_durable "X" -}}
-              <small class="dot green-dot">Développement durable</small>
-              {{- end -}}
-              {{- if eq .Params.rserso "X" -}}
-              <small class="dot red-dot">RSE/RSO</small>
-              {{- end -}}
-              {{- if eq .Params.numerique "X" -}}
-              <small class="dot yellow-dot">Numérique</small>
-              {{- end -}}
-              {{- if eq .Params.marketing "X" -}}
-              <small class="dot green-dot">Marketing</small>
-              {{- end -}}
-              {{- if eq .Params.communication "X" -}}
-              <small class="dot blue-dot">Communication</small>
-              {{- end -}}
-              {{- if eq .Params.medias_et_influence "X" -}}
-              <small class="dot red-dot">Médias et influence</small>
-              {{- end -}}
-              {{- if eq .Params.design_et_eco_conception "X" -}}
-              <small class="dot yellow-dot">Design et éco-conception</small>
-              {{- end -}}
-            </div>
-          </a>
+          {{- range where .Site.RegularPages ".Type" "partners" -}}
+          <div class="card">
+            <a class="speaker-card" href="{{ .Permalink }}">
+              <h2>{{- .Params.title }}</h2>
+              <p>{{- .Params.titre_du_profil_maximum_80_caracteres -}}</p>
+              <small class="place">{{- range .GetTerms "regions" -}}{{ .Title }}{{ end }}</small> 
+              <small class="computer">{{- .Params.distanciel -}}</small>       
+              <ul class="domains custom-ul">
+                {{ range .GetTerms "domains" }}
+                  <li>
+                    <small>
+                      <a href="{{ .Permalink }}">
+                        {{ .Title }}
+                      </a>
+                    </small>
+                  </li>
+                {{ end }}
+              </ul>
+            </a>
+          </div>
           {{- end -}}
         </div>
       </div>
