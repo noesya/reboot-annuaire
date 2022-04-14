@@ -7,6 +7,7 @@ url_de_votre_profil_linkedin: https://www.linkedin.com/in/laurentjoudon/
 url_de_votre_site_web_professionnel: https://laurentjoudon.fr
 adresse_e_mail: contact@laurentjoudon.com
 numero_de_telephone: 0622212259
+benevol: Repas offerts
 domains:
 - developpement-durable
 - rse-rso

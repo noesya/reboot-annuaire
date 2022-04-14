@@ -6,7 +6,8 @@ distanciel: Oui, c'est possible
 url_de_votre_profil_linkedin: https://www.linkedin.com/in/chloebeghin/
 url_de_votre_site_web_professionnel: https://twitter.com/ChloeBeghin
 adresse_e_mail: chloe.beghin@mmibordeaux.com
-numero_de_telephone: /
+numero_de_telephone:
+benevol: Repas offerts
 domains:
 - developpement-durable
 - numerique

@@ -7,6 +7,7 @@ url_de_votre_profil_linkedin: https://www.linkedin.com/in/prevotcharles/
 url_de_votre_site_web_professionnel: https://twitter.com/CharlesPvt
 adresse_e_mail: charles@plutot.cool
 numero_de_telephone: 0634404669
+benevol: Repas offerts
 domains:
 - rse-rso
 - design

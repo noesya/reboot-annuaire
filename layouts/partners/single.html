@@ -13,7 +13,7 @@
         </li>
         <li class="breadcrumb-item active" itemprop="itemListElement" itemscope=""
             itemtype="https://schema.org/ListItem">
-          <span itemprop="name">{{ .Title }}</span>
+          <span class="current-partner" itemprop="name">{{ .Title }}</span>
           <meta content="2" itemprop="position">
         </li>
       </ol>
@@ -22,56 +22,58 @@
 </header>
 
 <div class="container container_partner">
-  <small>{{ .Params.parcours_professionnel_maximum_256_caracteres }}</small>
+  <h5>{{ .Params.parcours_professionnel_maximum_256_caracteres }}</h5>
   <div class="container_partner_info">
     <div class="region">
       <small>Région</small>
       {{ range .GetTerms "regions" }}
-      <small class="place">
+      <p class="place">
         <a href="{{ .Permalink }}">
           {{ .Title }}
         </a>
-      </small>
+      </p>
       {{ end }}
     </div>
     <small>Domaines</small>
     <ul class="domains custom-ul">
       {{ range .GetTerms "domains" }}
       <li>
-        <small>
+        <p>
           <a href="{{ .Permalink }}">
             {{ .Title }}
           </a>
-        </small>
+        </p>
       </li>
       {{ end }}
     </ul>
     <div class="distanciel">
       <small>Distanciel</small>
-      <p>{{ .Params.souhaitez_vous_intervenir_a_distance }}</p>
+      <p class="computer">{{ .Params.distanciel }}</p>
     </div>
+    {{ if .Params.numero_de_telephone}}
     <div class="phone">
       <small>Téléphone</small>
       <p>{{ .Params.numero_de_telephone }}</p>
     </div>
+    {{ end }}
     <div class="mail">
       <small>Email</small>
-      <small>{{ .Params.adresse_e_mail }}</small>
+      <p>{{ .Params.adresse_e_mail }}</p>
     </div>
     <div class="linkedin link">
       <small>LinkedIn</small>
-      <small><a href="{{ .Params.url_de_votre_profil_linkedin }}" target="_blank">{{
-        .Params.url_de_votre_profil_linkedin }}</a></small>
+      <p><a href="{{ .Params.url_de_votre_profil_linkedin }}" target="_blank">{{
+        .Params.url_de_votre_profil_linkedin }}</a></p>
     </div>
     <div class="site link">
       <small>Site</small>
-      <small><a href="{{ .Params.url_de_votre_site_web_professionnel }}" target="_blank">{{
-        .Params.url_de_votre_site_web_professionnel }}</a></small>
+      <p><a href="{{ .Params.url_de_votre_site_web_professionnel }}" target="_blank">{{
+        .Params.url_de_votre_site_web_professionnel }}</a></p>
     </div>
   </div>
   <div class="benevol">
     <small>Conditions pour une intervention bénévole</small>
-    <p>{{ .Params.conditions_eventuelles_pour_une_intervention_benevole }}</p>
+    <p>{{ .Params.benevol }}</p>
   </div>
 </div>
 {{ end }}

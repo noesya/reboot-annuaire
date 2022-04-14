@@ -1,14 +1,21 @@
 
 .container_partner{
-
-    p{
-        font-size: 14px;
+    h5{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 33px;
+        width: 55%;
+    }
+    p, .domains{
+        margin: 0;
+        font-size: 20px;
+        line-height: 20px;
     }
 
 
     .container_partner_info{
         margin-right: 20vw;
-        margin-left: 20vw;
         line-height : 4vh;
     
         .link{
@@ -25,4 +32,8 @@
 }
 small{
     line-height: 28px;
+    margin-top: 10px;
+}
+.current-partner{
+    color: #7FC295;
 }
