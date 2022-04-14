@@ -1,7 +1,5 @@
 languageCode: 'fr-FR'
 title: 'Annuaire Reboot'
-permalinks:
-  partners: /personnes/:title
 taxonomies:
   region: 'regions'
   domain: 'domains'
