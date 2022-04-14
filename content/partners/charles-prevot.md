@@ -10,7 +10,7 @@ numero_de_telephone: 0634404669
 benevol: Repas offerts
 domains:
 - rse-rso
-- design
+- design-et-eco-conception
 regions:
 - ile-de-france
 ---

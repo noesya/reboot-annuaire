@@ -11,7 +11,7 @@ benevol: Repas offerts
 domains:
 - developpement-durable
 - numerique
-- design
+- design-et-eco-conception
 regions:
 - nouvelle-aquitaine
 ---

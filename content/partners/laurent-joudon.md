@@ -12,7 +12,7 @@ domains:
 - developpement-durable
 - rse-rso
 - communication
-- design
+- design-et-eco-conception
 regions:
 - provence-alpes-cote-azur
 ---
