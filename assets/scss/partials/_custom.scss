@@ -32,8 +32,13 @@ header[role=banner] .logo {
       align-self: start;
   }
 }
-.card-container{
+.results-container{
   margin-top: 6rem;
+  p:first-child{
+    color: #7FC295;
+  }
+}
+.card-container{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 4rem 2rem;
@@ -84,4 +89,15 @@ header[role=banner] .logo {
   }
 .custom-ul{
   padding-left: 0
+}
+.domains{
+  display: flex;
+  width: fit-content;
+  ul, li{
+    list-style: none;
+
+  }
+  li{
+    margin-right: 10px;
+  }
 }
