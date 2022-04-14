@@ -24,7 +24,6 @@ def _slugify(value, allow_unicode=False):
     value = re.sub(r'[^\w\s-]', '', value.lower())
     return re.sub(r'[-\s]+', '_', value).strip('-_')
 
-
 list = []
 line_number = 0
 with open('inscription_dans_lannuaire_reboot_dune_personne_intervenante_dans_les_ecoles___reboot_2022.tsv',
