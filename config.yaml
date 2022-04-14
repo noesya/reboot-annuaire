@@ -3,3 +3,4 @@ title: 'Annuaire Reboot'
 taxonomies:
   region: 'regions'
   domain: 'domains'
+paginate : 6

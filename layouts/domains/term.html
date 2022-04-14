@@ -27,7 +27,7 @@
       <div class="results-container">
         <p>{{ len .Pages }} résultats</p>
         <div class="card-container">
-          {{- range .Pages -}}
+          {{- range .Paginator.Pages -}}
           <div class="card">
             <a class="speaker-card" href="{{ .Permalink }}">
               <h3>{{- .Params.title }}</h3>
@@ -46,6 +46,7 @@
             </a>
           </div>
           {{- end -}}
+          {{ partial "pagination"  . }}
         </div>
       </div>
     </section>
