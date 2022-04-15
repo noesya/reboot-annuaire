@@ -65,6 +65,8 @@ for column in list:
             domainsList.append("medias-et-influence")
         if column[10] == "X":
             domainsList.append("design-et-ecoconception")
+        if column[14] == "Sélectionnez une région":
+            column[14] = ""
 
         data = f'{{"title" : "{column[0]} {column[1]}", "description": "{column[2]}", "career": "{column[3]}", "domains": {json.dumps(domainsList)}, "services": "{column[11]}", "phone": "{column[12]}", "email": "{column[13]}", "regions": "{column[14]}", "remote": "{column[15]}", "linkedin": "{column[16]}", "website": "{column[17]}", "conditions": "{column[18]}"}}'
         data = json.loads(data)
