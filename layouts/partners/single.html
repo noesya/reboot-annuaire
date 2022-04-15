@@ -58,7 +58,7 @@
     {{ if .Params.phone}}
     <div class="phone link">
       <small>Téléphone</small>
-      <p>{{ .Params.phone }} <a href="tel:{{ .Params.phone }}">Appeler</a></p>
+      <p>+33{{ int .Params.phone }} <a href="tel:+33{{ int .Params.phone }}">Appeler</a></p>
     </div>
     {{ end }}
     <div class="mail link">
