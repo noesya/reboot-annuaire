@@ -29,14 +29,19 @@
         </ul>
       </div>
       <div class="results-container">
-        <p>{{- len (where .Site.RegularPages ".Type" "partners") }} résultats</p>
+        <p>{{- len (where .Site.RegularPages ".Type" "partners") }}
+          {{- if gt (len (where .Site.RegularPages ".Type" "partners")) 1 }}
+          résultats
+          {{- else }}
+          résultat
+          {{- end }}</p>
         <div class="card-container">
           {{- range .Paginator.Pages -}}
           <div class="card">
             <a class="speaker-card" href="{{- .Permalink -}}">
               <h3>{{- .Params.title -}}</h3>
               <p>{{- .Params.description -}}</p>
-              {{- if not ( in .Params.regions "Sélectionnez une région") -}}
+              {{- if .Params.regions -}}
               <small class="place">{{- range .GetTerms "regions" -}}{{- .Title -}}{{- end -}}</small>
               {{- end -}}
               <small class="computer">{{- .Params.remote -}}</small>

@@ -25,29 +25,36 @@
   <div class="container">
     <section>
       <div class="results-container">
-        <p>{{ len .Pages }} résultats</p>
+        <p>{{- len .Pages }}
+          {{- if gt (len .Pages) 1 }}
+          résultats
+          {{- else }}
+          résultat
+          {{- end -}}</p>
         <div class="card-container">
           {{- range .Paginator.Pages -}}
           <div class="card">
             <a class="speaker-card" href="{{ .Permalink }}">
               <h3>{{- .Params.title }}</h3>
               <p>{{- .Params.description -}}</p>
-              <small class="place">{{- range .GetTerms "regions" -}}{{ .Title }}{{ end }}</small>
+              {{- if .GetTerms "regions" -}}
+              <small class="place">{{- range .GetTerms "regions" -}}{{- .Title -}}{{- end -}}</small>
+              {{- end -}}
               <small class="computer">{{- .Params.remote -}}</small>
               <ul class="domains custom-ul">
-                {{ range .GetTerms "domains" }}
+                {{- range .GetTerms "domains" -}}
                 <li>
                   <small class="dot green-dot">
-                    {{ .Title }}
+                    {{- .Title -}}
                   </small>
                 </li>
-                {{ end }}
+                {{- end -}}
               </ul>
             </a>
           </div>
           {{- end -}}
         </div>
-        {{ partial "pagination"  . }}
+        {{ partial "pagination" . }}
       </div>
     </section>
   </div>
