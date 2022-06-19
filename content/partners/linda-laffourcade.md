@@ -7,14 +7,9 @@ domains:
 - communication
 - numerique
 - design-et-ecoconception
-- communication
-- design-et-ecoconception
-- numerique
-- design-et-ecoconception
-- design-et-ecoconception
 email: llaffourcade@gmail.com
 linkedin: linkedin.com/in/llaffourcade
-phone: '0625035242'
+phone: '06 25 03 52 42'
 regions: nouvelle-aquitaine
 remote: Oui, en distanciel uniquement
 services: Mentoring d'un groupe

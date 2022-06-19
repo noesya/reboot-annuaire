@@ -9,7 +9,7 @@ domains:
 - design-et-ecoconception
 email: reveillerguillon.henry@gmail.com
 linkedin: https://www.linkedin.com/in/henry-reveillerguillon/
-phone: 0781887300
+phone: "07 81 88 73 00"
 regions: nouvelle-aquitaine
 remote: Oui, c'est possible
 services: Cours de communication responsable

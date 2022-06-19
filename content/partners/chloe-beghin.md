@@ -7,13 +7,9 @@ domains:
 - communication
 - numerique
 - design-et-ecoconception
-- communication
-- design-et-ecoconception
-- numerique
-- design-et-ecoconception
 email: chloe.beghin@mmibordeaux.com
 linkedin: linkedin.com/in/chloebeghin
-phone: 0607279593
+phone: "06 07 27 95 93"
 regions: nouvelle-aquitaine
 remote: Non, en présentiel uniquement
 services: Cours sur l'accessibilité numérique

@@ -7,11 +7,9 @@ domains:
 - communication
 - numerique
 - design-et-ecoconception
-- communication
-- design-et-ecoconception
 email: yuna.orsini@gmail.com
 linkedin: linkedin.com/in/yunaorsini
-phone: 064229831
+phone: ""
 regions: nouvelle-aquitaine
 remote: Oui, c'est possible
 services: Mentoring d'un groupe

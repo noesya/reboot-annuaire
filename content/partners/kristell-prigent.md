@@ -7,8 +7,6 @@ domains:
 - communication
 - numerique
 - design-et-ecoconception
-- communication
-- design-et-ecoconception
 email: test@gmail.com
 linkedin: ''
 phone: ''

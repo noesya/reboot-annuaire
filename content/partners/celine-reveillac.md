@@ -8,18 +8,9 @@ domains:
 - numerique
 - design-et-ecoconception
 - communication
-- design-et-ecoconception
-- numerique
-- design-et-ecoconception
-- design-et-ecoconception
 - developpement-durable
 - rse-rso
-- numerique
 - medias-et-influence
-- developpement-durable
-- numerique
-- communication
-- design-et-ecoconception
 email: celine@solidacom.fr
 linkedin: linkedin.com/in/celinereveillac
 phone: "06 59 11 21 77"

@@ -71,7 +71,7 @@ header[role=banner] .logo {
 .container__partner__info {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin-top: 60px;
+  margin-top: 4rem;
   @media(max-width: 768px){
       grid-template-columns: 1fr;
   }
