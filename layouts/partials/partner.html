@@ -1,0 +1,26 @@
+<div class="card card__partner">
+    <h3>
+        <a href="{{- .Permalink -}}">
+        {{- .Params.title -}}
+        </a>
+    </h3>
+    <p>
+        {{ .Params.description }}
+    </p>
+    <div class="tags">
+        <ul>
+        {{ if .Params.regions }}
+        {{ range .GetTerms "regions" }}
+        <li class="dot yellow-dot">
+            {{ .Title }}
+        </li>
+        {{ end }}
+        {{ end }}
+        {{- range .GetTerms "domains" -}}
+        <li class="dot green-dot">
+            {{- .Title -}}
+        </li>
+        {{- end -}}
+        </ul>
+    </div>
+    </div>

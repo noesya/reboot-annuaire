@@ -2,3 +2,5 @@ node_modules
 *.lock
 resources
 .idea
+/public
+.DS_Store

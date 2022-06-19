@@ -5,57 +5,37 @@
       <h1>{{- .Title -}}</h1>
     </div>
   </header>
-  <div class="container">
-    <section itemprop="articleBody">
-      <p>{{- .Description | safeHTML -}}</p>
-    </section>
-    <section>
-      <div class="tags">
-        <p>
-          Domaines
-        </p>
-        <ul>
-          {{- range .Site.Taxonomies.domains -}}
-          <li><a href="{{ .Page.Permalink }}"><small class="dot green-dot">{{- .Page.Title -}}</small></a></li>
-          {{- end -}}
-        </ul>
-        <p>
-          Régions
-        </p>
-        <ul>
-          {{- range .Site.Taxonomies.regions -}}
-          <li><a href="{{ .Page.Permalink }}"><small>{{- .Page.Title -}}</small></a></li>
-          {{- end -}}
-        </ul>
+  <div class="blocks">
+    <section class="block-chapter">
+      <div class="container">
+        <div class="block-content">
+          <div>
+            <p>{{- .Description | safeHTML -}}</p>
+          </div>
+        </div>
       </div>
+    </section>
+  </div>
+  <div class="container">
+    <div class="tags">
+      <p>Régions</p>
+      <ul>
+        {{- range .Site.Taxonomies.regions -}}
+          <li>{{ partial "region.html" .Page }}</li>
+        {{- end -}}
+      </ul>
+      <p>Domaines</p>
+      <ul>
+        {{- range .Site.Taxonomies.domains -}}
+          <li>{{ partial "domain.html" .Page }}</li>
+        {{- end -}}
+      </ul>
+    </div>
+    <section>
       <div class="results-container">
-        <p>{{- len (where .Site.RegularPages ".Type" "partners") }}
-          {{- if gt (len (where .Site.RegularPages ".Type" "partners")) 1 }}
-          résultats
-          {{- else }}
-          résultat
-          {{- end }}</p>
         <div class="card-container">
           {{- range .Paginator.Pages -}}
-          <div class="card">
-            <a class="speaker-card" href="{{- .Permalink -}}">
-              <h3>{{- .Params.title -}}</h3>
-              <p>{{- .Params.description -}}</p>
-              {{- if .Params.regions -}}
-              <small class="place">{{- range .GetTerms "regions" -}}{{- .Title -}}{{- end -}}</small>
-              {{- end -}}
-              <small class="computer">{{- .Params.remote -}}</small>
-              <ul class="domains custom-ul">
-                {{- range .GetTerms "domains" -}}
-                <li>
-                  <small class="dot green-dot">
-                    {{- .Title -}}
-                  </small>
-                </li>
-                {{- end -}}
-              </ul>
-            </a>
-          </div>
+            {{ partial "partner.html" . }}
           {{- end -}}
         </div>
         {{- partial "pagination" . -}}

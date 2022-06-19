@@ -14,7 +14,7 @@ domains:
 email: chloe.beghin@mmibordeaux.com
 linkedin: linkedin.com/in/chloebeghin
 phone: 0607279593
-regions: Nouvelle-Aquitaine
+regions: nouvelle-aquitaine
 remote: Non, en présentiel uniquement
 services: Cours sur l'accessibilité numérique
 title: Chloé  Beghin

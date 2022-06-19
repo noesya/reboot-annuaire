@@ -68,7 +68,7 @@ for column in list:
         if column[14] == "Sélectionnez une région":
             column[14] = ""
 
-        data = f'{{"title" : "{column[0]} {column[1]}", "description": "{column[2]}", "career": "{column[3]}", "domains": {json.dumps(domainsList)}, "services": "{column[11]}", "phone": "{column[12]}", "email": "{column[13]}", "regions": "{column[14]}", "remote": "{column[15]}", "linkedin": "{column[16]}", "website": "{column[17]}", "conditions": "{column[18]}"}}'
+        data = f'{{"title" : "{column[0]} {column[1]}", "description": "{column[2]}", "career": "{column[3]}", "domains": {json.dumps(domainsList)}, "services": "{column[11]}", "phone": "{column[12]}", "email": "{column[13]}", "regions": "{slugify(column[14])}", "remote": "{column[15]}", "linkedin": "{column[16]}", "website": "{column[17]}", "conditions": "{column[18]}"}}'
         data = json.loads(data)
 
         # create new file with content

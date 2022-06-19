@@ -11,7 +11,7 @@ domains:
 email: charles.prevot@gmail.com
 linkedin: https://www.linkedin.com/in/prevotcharles/?originalSubdomain=fr
 phone: ''
-regions: Île-de-France
+regions: ile-de-france
 remote: Oui, c'est possible
 services: Cours de communication responsable
 title: Charles Prévôt

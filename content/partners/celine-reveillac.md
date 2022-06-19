@@ -22,8 +22,8 @@ domains:
 - design-et-ecoconception
 email: celine@solidacom.fr
 linkedin: linkedin.com/in/celinereveillac
-phone: 0659112177
-regions: ''
+phone: "06 59 11 21 77"
+regions: 'nouvelle-aquitaine'
 remote: Oui, c'est possible
 services: Cours sur le greenwashing
 title: Céline Réveillac

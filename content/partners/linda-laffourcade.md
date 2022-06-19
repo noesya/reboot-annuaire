@@ -15,7 +15,7 @@ domains:
 email: llaffourcade@gmail.com
 linkedin: linkedin.com/in/llaffourcade
 phone: '0625035242'
-regions: Nouvelle-Aquitaine
+regions: nouvelle-aquitaine
 remote: Oui, en distanciel uniquement
 services: Mentoring d'un groupe
 title: Linda  Laffourcade

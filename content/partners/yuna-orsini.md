@@ -12,9 +12,9 @@ domains:
 email: yuna.orsini@gmail.com
 linkedin: linkedin.com/in/yunaorsini
 phone: 064229831
-regions: Nouvelle-Aquitaine
+regions: nouvelle-aquitaine
 remote: Oui, c'est possible
 services: Mentoring d'un groupe
 title: Yuna Orsini
-website: 'yuna-orsini.com  '
+website: 'https://www.yuna-orsini.com'
 ---
