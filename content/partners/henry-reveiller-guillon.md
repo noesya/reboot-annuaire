@@ -14,5 +14,6 @@ regions: nouvelle-aquitaine
 remote: Oui, c'est possible
 services: Cours de communication responsable
 title: Henry REVEILLER-GUILLON
+LinkTitle: REVEILLER-GUILLON
 website: https://henryreveillerguillon.netlify.app/
 ---

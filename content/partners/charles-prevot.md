@@ -15,5 +15,6 @@ regions: ile-de-france
 remote: Oui, c'est possible
 services: Cours de communication responsable
 title: Charles Prévôt
+LinkTitle: Prévôt
 website: ''
 ---

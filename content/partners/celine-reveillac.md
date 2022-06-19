@@ -18,5 +18,6 @@ regions: 'nouvelle-aquitaine'
 remote: Oui, c'est possible
 services: Cours sur le greenwashing
 title: Céline Réveillac
+LinkTitle: Réveillac
 website: ''
 ---

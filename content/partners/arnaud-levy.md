@@ -12,5 +12,6 @@ regions: ile-de-france
 remote: Oui, c'est possible
 services: Accompagnement à la certification Numérique Responsable
 title: Arnaud Levy
+LinkTitle: Levy
 website: https://www.arnaudlevy.com
 ---

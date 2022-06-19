@@ -1,7 +1,7 @@
 ---
 career: ''
 conditions: ''
-description: participation au développement du réseau EKOénergie en France
+description: Participation au développement du réseau EKOénergie en France
 domains:
 - marketing
 - communication
@@ -16,5 +16,6 @@ services: 'Par exemple : Mentoring d''un groupe, Animation de hackathon, Cours d
   communication responsable, Accompagnement à la certification Numérique Responsable
   ...'
 title: Kristell  Prigent
+LinkTitle: Prigent
 website: ''
 ---

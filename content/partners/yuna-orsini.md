@@ -14,5 +14,6 @@ regions: nouvelle-aquitaine
 remote: Oui, c'est possible
 services: Mentoring d'un groupe
 title: Yuna Orsini
+LinkTitle: Orsini
 website: 'https://www.yuna-orsini.com'
 ---
