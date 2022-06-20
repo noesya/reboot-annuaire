@@ -9,7 +9,9 @@ header[role=banner] .logo {
   align-items: baseline;
   gap: 0.75rem
 }
-
+.navbar button {
+  display: none;
+}
 .tags{
   margin: 4rem 0;
   gap: 1.5rem  2rem;
