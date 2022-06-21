@@ -3,15 +3,6 @@ career: ''
 conditions: ''
 description: 'Communication *plus responsable* Co-fondatrice Reboot! '
 domains:
-- marketing
-- communication
-- numerique
-- design-et-ecoconception
-- communication
-- design-et-ecoconception
-- numerique
-- design-et-ecoconception
-- design-et-ecoconception
 - developpement-durable
 - rse-rso
 - numerique

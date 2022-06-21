@@ -3,15 +3,6 @@ career: ''
 conditions: ''
 description: Co-fondateur, développeur back-end @ noesya
 domains:
-- marketing
-- communication
-- numerique
-- design-et-ecoconception
-- communication
-- design-et-ecoconception
-- numerique
-- design-et-ecoconception
-- design-et-ecoconception
 - developpement-durable
 - rse-rso
 - numerique
