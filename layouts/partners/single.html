@@ -10,8 +10,7 @@
             <meta content="1" itemprop="position">
           </a>
         </li>
-        <li class="breadcrumb-item active" itemprop="itemListElement" itemscope=""
-            itemtype="https://schema.org/ListItem">
+        <li class="breadcrumb-item active" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
           <span itemprop="name">{{ .Title }}</span>
           <meta content="2" itemprop="position">
         </li>
@@ -20,71 +19,67 @@
   </div>
 </header>
 
-<div class="container container_partner">
+<div class="container container__partner">
   {{ if .Params.description }}
-  <h5>{{ .Params.description }}</h5>
+  <p>{{ .Params.description }}</p>
   {{ end }} 
-  <div class="container_partner_info">
-    {{ if not ( in .Params.regions "Sélectionnez une région") }}
-    <div class="region">
-      <small>Région</small>
-      {{ range .GetTerms "regions" }}
-      <p class="place">
-        <a href="{{ .Permalink }}">
-          {{ .Title }}
-        </a>
+  <div class="container__partner__info">
+    <div>
+      {{ if .Params.phone}}
+      <p>
+        <small>Téléphone</small><br>
+        <a href="tel:{{ .Params.phone }}">{{ .Params.phone }}</a></p>
       </p>
       {{ end }}
-    </div>
-    {{ end }}
-    {{ if .Params.domains }}
-    <small>Domaines</small>
-    <ul class="domains custom-ul">
-      {{ range .GetTerms "domains" }}
-      <li >
-        <p >
-          <a href="{{ .Permalink }}" class="dot green-dot">
-            {{ .Title }}
-          </a>
+      {{ if .Params.email }}
+        <p>
+          <small>Email</small><br>
+          <a href="mailto:{{- .Params.email -}}">{{ .Params.email }} </a>
         </p>
-      </li>
       {{ end }}
+      {{ if .Params.linkedin }}
+        <p>
+          <small>LinkedIn</small><br>
+          <a href="{{- .Params.linkedin -}}" target="_blank">{{ .Params.linkedin }}</a>
+        </p>
       {{ end }}
-    </ul>
-    <div class="distanciel">
-      <small>Distanciel</small>
-      <p class="computer">{{ .Params.remote }}</p>
+      {{ if .Params.website }}
+        <p>
+          <small>Site</small><br>
+          <a href="{{- .Params.website -}}" target="_blank">{{ .Params.website }}</a>
+        </p>
+      {{ end }}
+      {{ if .Params.remote }}
+        <p>
+          <small>Distanciel</small><br>
+          {{ .Params.remote }}
+        </p>
+      {{ end }}
+      {{ if .Params.conditions }}
+        <p>
+          <small>Conditions pour une intervention bénévole</small><br>
+          {{ .Params.conditions }}
+        </p>
+      {{ end }}
     </div>
-    {{ if .Params.phone}}
-    <div class="phone link">
-      <small>Téléphone</small>
-      <p>+33{{ int .Params.phone }} <a href="tel:+33{{ int .Params.phone }}">Appeler</a></p>
+    <div>
+      {{ if not ( in .Params.regions "Sélectionnez une région") }}
+        <p>
+          <small>Région</small><br>
+          {{ range .GetTerms "regions" }}
+            {{ partial "region.html" .Page }}
+          {{ end }}
+        </p>
+      {{ end }}
+      {{ if .Params.domains }}
+        <p>
+          <small>Domaines</small><br>
+          {{ range .GetTerms "domains" }}
+            {{ partial "domain.html" .Page }}
+          {{ end }}
+        </p>
+      {{ end }}
     </div>
-    {{ end }}
-    <div class="mail link">
-      <small>Email</small>
-      <p>{{ .Params.email }} <a href="mailto:{{ .Params.email }}">Envoyer un mail</a></p>
-    </div>
-    {{ if .Params.linkedin }}
-    <div class="linkedin link">
-      <small>LinkedIn</small>
-      <p><a href="{{ .Params.linkedin }}" target="_blank">{{
-        .Params.linkedin }}</a></p>
-    </div>
-    {{ end }}
-    {{ if .Params.website }}
-    <div class="site link">
-      <small>Site</small>
-      <p><a href="{{ .Params.website }}" target="_blank">{{
-        .Params.website }}</a></p>
-    </div>
-    {{ end }}
   </div>
-  {{ if .Params.conditions }}
-  <div class="volunteer">
-    <p>Conditions pour une intervention bénévole</p>
-    <small>{{ .Params.conditions }}</small>
-  </div>
-  {{ end }}
 </div>
 {{ end }}

@@ -1,20 +1,3 @@
-@import "./partials/header";
+@import "reboot";
 @import "./partials/custom";
-@import "./partials/partner";
 @import "./partials/pagination";
-@import url(https://www.rebootcommunication.org/assets/css/main.min.04e44cc63ae5f5b0688c8c98b3a6e4573339111bd8248e1d022e624e7bedd471.css);
-
-@font-face {
-  font-family: "Aestetico Forma";
-  src: url(/assets/fonts/AesteticoFormal-Bold/font.woff) format("woff"),
-       url(/assets/fonts/AesteticoFormal-Bold/font.woff2) format("woff2"),
-       url(/assets/fonts/AesteticoFormal-Light/font.woff) format("woff"),
-       url(/assets/fonts/AesteticoFormal-Light/font.woff2) format("woff2"),
-       url(/assets/fonts/AesteticoFormal-Thin/font.woff) format("woff"),
-       url(/assets/fonts/AesteticoFormal-Thin/font.woff2) format("woff2");
-}
-@font-face {
-  font-family: "Icon";
-  src: url(/assets/fonts/icons/icomoon.ttf) format("ttf"),
-       url(/assets/fonts/icons/icomoon.woff) format("woff");
-}
