@@ -28,7 +28,7 @@
       {{ if .Params.phone}}
       <p>
         <small>Téléphone</small><br>
-        <a href="tel:{{ .Params.phone }}">{{ .Params.phone }}</a></p>
+        <a href="tel:{{string .Params.phone }}">{{string .Params.phone }}</a></p>
       </p>
       {{ end }}
       {{ if .Params.email }}
