@@ -10,7 +10,7 @@ domains:
 email: contact@arnaudlevy.com
 linkedin: linkedin.com/in/arnaudlevy
 phone: 0687602193
-regions: Nouvelle-Aquitaine
+regions: nouvelle-aquitaine
 remote: Oui, c'est possible
 services: Accompagnement à la certification Numérique Responsable
 title: Arnaud Levy

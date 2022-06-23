@@ -4,10 +4,6 @@ conditions: ''
 description: 'Communication *plus responsable* Co-fondatrice Reboot! '
 domains:
 - developpement-durable
-- rse-rso
-- numerique
-- medias-et-influence
-- developpement-durable
 - numerique
 - communication
 - design-et-ecoconception

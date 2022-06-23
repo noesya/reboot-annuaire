@@ -8,22 +8,6 @@ domains:
 - developpement-durable
 - rse-rso
 - numerique
-- medias-et-influence
-- developpement-durable
-- numerique
-- communication
-- design-et-ecoconception
-- developpement-durable
-- rse-rso
-- numerique
-- marketing
-- communication
-- design-et-ecoconception
-- rse-rso
-- numerique
-- developpement-durable
-- rse-rso
-- numerique
 - marketing
 - communication
 - medias-et-influence
@@ -31,7 +15,7 @@ domains:
 email: contact@sloweare.com
 linkedin: https://www.linkedin.com/in/thomas-ebele/
 phone: 0681061449
-regions: Île-de-France
+regions: ile-de-france
 remote: Oui, c'est possible
 services: Comment bien communiquer sur sa démarche responsable en tant que marque
   ; Concilier éthique, transparence et RSE, Innovation et business models éthiques

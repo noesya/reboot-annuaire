@@ -4,20 +4,6 @@ career: Commissaire aux comptes spécialisé dans la technologie blockchain et p
 conditions: ''
 description: 'Commissaire aux comptes spécialisé dans la technologie blockchain '
 domains:
-- developpement-durable
-- rse-rso
-- numerique
-- medias-et-influence
-- developpement-durable
-- numerique
-- communication
-- design-et-ecoconception
-- developpement-durable
-- rse-rso
-- numerique
-- marketing
-- communication
-- design-et-ecoconception
 - rse-rso
 - numerique
 email: htrebosc@wanadoo.fr
