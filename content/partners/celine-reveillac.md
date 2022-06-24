@@ -1,18 +1,17 @@
 ---
 career: ''
 conditions: ''
-description: 'Communication *plus responsable* Co-fondatrice Reboot! '
+description: Conseil en communication sans bullshit, co-fondatrice Reboot!
 domains:
 - developpement-durable
-- numerique
+- rse-rso
 - communication
-- design-et-ecoconception
 email: celine@solidacom.fr
 linkedin: linkedin.com/in/celinereveillac
 phone: 0659112177
-regions: ''
+regions: nouvelle-aquitaine
 remote: Oui, c'est possible
-services: Cours sur le greenwashing
+services: '-'
 title: Céline Réveillac
 website: ''
 ---
